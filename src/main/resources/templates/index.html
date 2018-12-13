@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv=" Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cloud Foundry Multi-buildpack Demo</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Eczar" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://unpkg.com/normalize.css@8.0.0/normalize.css"/>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+<div id="container">
+    <h1>Cloud Foundry Multi-buildpack Demo</h1>
+    <p>Hello Buildpack:
+        <span th:switch="${buildpackInstalled}"><span th:case="true" class="installed">INSTALLED</span>
+        <span th:case="false" class="not-installed">NOT INSTALLED</span>
+    </span>
+    </p>
+    <div id="footer">
+        <img src="pivotal.png"/>
+        <p>Copyright &copy; 2018 Pivotal Software Inc.</p>
+    </div>
+</div>
+
+<a href="https://github.com/alexandreroman/cf-multi-buildpack-demo"><img
+        style="position: absolute; top: 0; right: 0; border: 0;"
+        src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"
+        alt="Fork me on GitHub"></a>
+</body>
+</html>

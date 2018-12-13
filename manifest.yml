@@ -1,0 +1,10 @@
+---
+applications:
+  - name: cf-multi-buildpack-demo
+    path: target/cf-multi-buildpack-demo.jar
+    memory: 1G
+    random-route: true
+    buildpacks:
+      # Uncomment the next line to see multi-buildpack in action.
+      #- https://github.com/alexandreroman/hello-buildpack.git
+      - https://github.com/cloudfoundry/java-buildpack.git
